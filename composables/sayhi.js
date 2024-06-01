@@ -1,3 +1,3 @@
-export const useSuccessToast = () => {
+export const sayHi = () => {
   alert("hi");
 };

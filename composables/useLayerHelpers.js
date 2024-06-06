@@ -2,7 +2,7 @@ import { useLangStore } from "@/stores/lang";
 import { useThemeStore } from "@/stores/theme";
 import { useGlobalStore } from "@/stores/global";
 
-export const useHelpers = () => {
+export const useLayerHelpers = () => {
   // const route = useRoute();
   // const router = useRouter();
 

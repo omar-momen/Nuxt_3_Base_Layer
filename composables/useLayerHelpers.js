@@ -119,40 +119,5 @@ export const useLayerHelpers = () => {
         return `${dayStr}-${monthStr}-${year}`;
       }
     },
-
-    shuffle: (array) => {
-      let currentIndex = array.length,
-        randomIndex;
-
-      // While there remain elements to shuffle.
-      while (currentIndex != 0) {
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-          array[randomIndex],
-          array[currentIndex],
-        ];
-      }
-
-      return array;
-    },
-
-    getSubRandomArr: (arr) => {
-      const shuffledArray = arr.slice();
-      for (let i = shuffledArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffledArray[i], shuffledArray[j]] = [
-          shuffledArray[j],
-          shuffledArray[i],
-        ];
-      }
-      return shuffledArray.slice(
-        0,
-        Math.floor(Math.random() * shuffledArray.length - 1)
-      );
-    },
   };
 };

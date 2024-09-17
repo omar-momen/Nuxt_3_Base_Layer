@@ -33,7 +33,7 @@ export const useLayerHelpers = () => {
       return capitalizedSentence;
     },
 
-    numberToSuffix(num) {
+    numberToSuffix: (num) => {
       if (num === 0) return "0";
       const suffixes = ["", "K", "M", "B", "T"]; // add more suffixes if needed
       const i = Math.floor(Math.log10(num) / 3);
@@ -41,7 +41,7 @@ export const useLayerHelpers = () => {
       return scaled.toFixed(1).replace(/\.0$/, "") + suffixes[i];
     },
 
-    numberToCommas(number) {
+    numberToCommas: (number) => {
       return Math.round(number)
         .toString()
         .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
